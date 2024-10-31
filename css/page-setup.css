@@ -1,0 +1,12 @@
+
+#nostracon_setup_code {
+	resize: none;
+	width: 100%;
+	height: 20em;
+}
+
+
+#nostracon_setup_code[readonly="readonly"], 
+#nostracon_setup_code[readonly] {
+	background-color: white;
+}

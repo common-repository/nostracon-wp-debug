@@ -1,0 +1,57 @@
+/* Using two concepts for floats and borders */
+/* For more details: */
+/* http://stackoverflow.com/questions/5195836/2-column-div-layout-right-column-with-fixed-width-left-fluid */
+/* http://stackoverflow.com/questions/18039463/vertical-border-between-floating-divs-using-css */
+
+.nostracon_container {
+	/* Apply some height (can be auto) and a "overflow: hidden" to this outer div, so that it surrounds both inner divs. */
+	height: auto;
+	overflow: hidden;
+}
+
+	.nostracon_aside {
+		width: 180px;
+		float: right;
+		
+		/* Border of the aside, and border width should be exactly as wide as the border of the main container, and the margin should be exactly as wide as the border */
+		border-left: 1px solid lightgray;
+		margin-left: -1px;
+		
+		/* Push the content away from the border */
+		padding-left: 20px;
+	}
+	
+		.nostracon_aside_box {
+			border: 1px solid lightgray;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	
+	
+	.nostracon_main {
+		float: none; /* not needed, just for clarification here */
+
+		
+		/* The next properties are meant to keep this block independent from the other floated one */
+		width: auto;
+		overflow: hidden;
+		
+		/* Border of the main container, and the border width should be exactly as wide as the border of the aside */
+		border-right: 1px solid lightgray;
+		
+		/* Push the content away from the border */
+		padding-right: 20px;
+	}
+		
+		
+		#nostracon_settings_code {
+			resize: none;
+			width: 100%;
+			height: 9em;
+		}
+		
+		
+		#nostracon_settings_code[readonly="readonly"], 
+		#nostracon_settings_code[readonly] {
+			background-color: white;
+		}

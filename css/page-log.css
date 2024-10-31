@@ -1,0 +1,12 @@
+#nostracon_debug_log {
+	resize: none;
+
+	height: 36em;
+}
+
+.nostracon_debug_log_nowrap {
+	white-space: pre;
+	word-wrap: normal;
+	overflow-x: scroll;
+}
+
